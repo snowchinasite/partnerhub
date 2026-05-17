@@ -1,4 +1,42 @@
 {
+  "links": [
+    {
+      "title": "SPN Learn 合作伙伴学习",
+      "description": "合作伙伴按需学习课程与认证路径",
+      "url": "https://spnlearn.snowflake.com",
+      "color": "#0D2B45"
+    },
+    {
+      "title": "Snowflake University",
+      "description": "入门级按需培训课程与动手实验",
+      "url": "https://learn.snowflake.com/",
+      "color": "#1B9BD1"
+    },
+    {
+      "title": "Snowflake 官方文档",
+      "description": "产品指南、参考手册与版本发布信息",
+      "url": "https://docs.snowflake.com/",
+      "color": "#F59E0B"
+    },
+    {
+      "title": "QuickStarts 动手实验",
+      "description": "各类功能与集成的实战教程",
+      "url": "https://quickstarts.snowflake.com/",
+      "color": "#8B5CF6"
+    },
+    {
+      "title": "Snowflake 社区",
+      "description": "问答交流、知识分享与协作平台",
+      "url": "https://community.snowflake.com/",
+      "color": "#7C3AED"
+    },
+    {
+      "title": "中国区技术支持",
+      "description": "联系 Snowflake 中国区 Support 团队",
+      "url": "https://docs.snowflake.cn/en/user-guide/contacting-support",
+      "color": "#10B981"
+    }
+  ],
   "webinars": [
     {
       "title": "SnowPro Core 认证培训",

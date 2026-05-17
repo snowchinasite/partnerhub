@@ -1,15 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let data = { webinars: [] };
+  let data = { webinars: [], links: [] };
   let activeWebinarFilter = "全部";
 
   fetch("data.json")
     .then(r => r.json())
     .then(d => {
       data = d;
+      renderLinks();
       renderFilters();
       renderWebinars();
     });
 
+
+  function renderLinks() {
+    const list = document.getElementById("link-list");
+    list.innerHTML = (data.links || []).map(l => `
+      <div class="link-card" style="border-top: 4px solid ${l.color}" onclick="window.open('${l.url}', '_blank')">
+        <div class="link-card-title">${l.title}</div>
+        <div class="link-card-desc">${l.description}</div>
+      </div>
+    `).join("");
+  }
 
   function getAllTags(items) {
     const tags = new Set();

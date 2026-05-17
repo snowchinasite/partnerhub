@@ -384,6 +384,51 @@ main {
   margin-top: 0.1rem;
 }
 
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.link-card {
+  background: var(--sf-white);
+  border-radius: var(--sf-radius);
+  border: 1px solid var(--sf-gray-200);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: var(--sf-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.link-card:hover {
+  box-shadow: var(--sf-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.link-card-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--sf-navy);
+  margin-bottom: 0.35rem;
+}
+
+.link-card-desc {
+  font-size: 0.78rem;
+  color: var(--sf-gray-600);
+  line-height: 1.4;
+}
+
 .empty-state {
   text-align: center;
   padding: 3rem;
