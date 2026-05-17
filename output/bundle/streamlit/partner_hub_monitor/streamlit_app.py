@@ -1,1 +1,0 @@
-/Users/linli/.snowflake/cortex/playground/workspace/partner-site/streamlit_app.py

@@ -1,2 +1,6 @@
 keys/
 worker/
+output/
+monitor.py
+snowflake.yml
+streamlit_app.py
