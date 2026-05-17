@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowflake中国合作伙伴资料站</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-area">
+      <svg class="snowflake-logo" viewBox="0 0 36 36" width="40" height="40">
+        <path d="M18 0l2.12 8.49L26.49 2.1l-2.12 8.49L33 8.49 26.49 14.1l8.49 2.12-8.49 2.12L33 27.51l-8.63-2.1 2.12 8.49-6.37-6.39L18 36l-2.12-8.49-6.37 6.39 2.12-8.49L3 27.51l6.51-9.17L1.02 16.22l8.49-2.12L3 8.49l8.63 2.1L9.51 2.1l6.37 6.39L18 0z" fill="#29B5E8"/>
+      </svg>
+      <div>
+        <h1>Snowflake中国合作伙伴资料站</h1>
+        <p class="subtitle">Partner Resource Hub</p>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main>
+  <section id="webinars" class="section active">
+    <div class="section-header">
+      <h2>Webinar 录屏</h2>
+      <p class="section-desc">点击卡片观看 Webinar 录屏回放</p>
+    </div>
+    <div class="filter-bar" id="webinar-filters"></div>
+    <div class="card-grid" id="webinar-list"></div>
+    <div class="empty-state" id="webinar-empty" style="display:none;">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#9CA3AF" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+      <p>暂无匹配的 Webinar</p>
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Snowflake Inc. All Rights Reserved</p>
+    <p class="footer-note">本站内容仅供 Snowflake 合作伙伴参考使用</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

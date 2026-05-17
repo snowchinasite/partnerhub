@@ -1,0 +1,70 @@
+{
+  "webinars": [
+    {
+      "title": "SnowPro Core 认证培训",
+      "date": "2025-09-25",
+      "speaker": "Lingxiao Li",
+      "description": "SnowPro Core 认证培训，涵盖 Snowflake 核心架构、存储与计算分离、虚拟仓库、数据共享等功能模块，同时包含考试要点与备考建议。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/-jb0JN0TQMikf-cR4iAMTg",
+      "passcode": "&63Yw9+i",
+      "tags": ["认证培训", "SnowPro"],
+      "attachments": [],
+      "docUrl": "https://learn.snowflake.com/en/certifications/snowpro-core/"
+    },
+    {
+      "title": "Snowflake 上的 dbt 项目实战",
+      "date": "2025-12-10",
+      "speaker": "Lingxiao Li",
+      "description": "在 Snowflake 上构建 dbt 项目的完整演示，包括模型开发、增量模型、测试与文档生成，涵盖从零搭建到部署上线的全流程最佳实践。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/IVnAgONzSkmGS47bTYIIvQ",
+      "passcode": "SnowflakeChina2025!",
+      "tags": ["dbt", "数据工程"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/user-guide/dbt-snowflake"
+    },
+    {
+      "title": "Snowflake Streamlit 数据应用",
+      "date": "2025-10-24",
+      "speaker": "Lingxiao Li",
+      "description": "演示如何在 Snowflake 中构建和部署 Streamlit 数据应用，包括数据可视化、用户交互组件、权限控制及与 Snowflake 数据的无缝集成。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/QaCwQk2CQI2GnQdaK8_zGw",
+      "passcode": "Snowflake2026!",
+      "tags": ["Streamlit", "数据应用"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit"
+    },
+    {
+      "title": "SPCS 原生托管 Docker 容器",
+      "date": "2026-02-03",
+      "speaker": "Lingxiao Li",
+      "description": "Snowpark Container Services 实战演示，展示如何在 Snowflake 中运行原生托管的 Docker 容器，适用于部署自定义模型、Web 应用及容器化工作负载。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/zAQmKaSbR5GyzIfh8dsmZg",
+      "passcode": "Snowflake2026!",
+      "tags": ["SPCS", "容器"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/developer-guide/snowpark-container-services/overview"
+    },
+    {
+      "title": "Snowflake 机器学习全流程",
+      "date": "2025-11-25",
+      "speaker": "Lingxiao Li",
+      "description": "Snowflake 机器学习全流程演示，包括 Feature Store、Model Registry 及 Cortex ML Functions，展示端到端 ML 工作流。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/sxVDIzotRte2DZ4l2gaEkg",
+      "passcode": "SnowflakeChina2025!",
+      "tags": ["机器学习", "ML"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/guides-overview-ml"
+    },
+    {
+      "title": "Snowflake原生RAG引擎Cortex Search",
+      "date": "2026-04-21",
+      "speaker": "Lingxiao Li",
+      "description": "Cortex Search 实战演示，展示如何利用 Snowflake 原生 RAG 引擎构建语义搜索服务，实现非结构化数据的智能检索与问答。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/XApmIh8rS0ygndTOLYa5tQ",
+      "passcode": "Snowflake2026!",
+      "tags": ["Cortex Search", "RAG"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview"
+    }
+  ]
+}
