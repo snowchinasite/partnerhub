@@ -31,12 +31,6 @@
       "color": "#EC4899"
     },
     {
-      "title": "Snowflake 社区",
-      "description": "问答交流、知识分享与协作平台",
-      "url": "https://community.snowflake.com/",
-      "color": "#7C3AED"
-    },
-    {
       "title": "中国区技术支持",
       "description": "联系 Snowflake 中国区 Support 团队",
       "url": "https://docs.snowflake.cn/en/user-guide/contacting-support",
