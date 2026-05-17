@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showApp() {
     document.getElementById("login-overlay").classList.add("hidden");
+    document.body.classList.remove("app-hidden");
     loadData();
   }
 

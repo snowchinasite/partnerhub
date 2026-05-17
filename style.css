@@ -87,6 +87,10 @@
   margin-top: 0.75rem;
 }
 
+.app-hidden header,
+.app-hidden main,
+.app-hidden footer { display: none; }
+
 * {
   margin: 0;
   padding: 0;
