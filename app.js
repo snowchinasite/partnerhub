@@ -1,16 +1,76 @@
+const API_BASE = "https://partner-hub-api.snowchina.workers.dev";
+
 document.addEventListener("DOMContentLoaded", () => {
   let data = { webinars: [], links: [] };
   let activeWebinarFilter = "全部";
+  let currentPartner = sessionStorage.getItem("partner") || "";
 
-  fetch("data.json")
-    .then(r => r.json())
-    .then(d => {
-      data = d;
-      renderLinks();
-      renderFilters();
-      renderWebinars();
-    });
+  if (currentPartner) {
+    showApp();
+  }
 
+  document.getElementById("login-btn").addEventListener("click", doLogin);
+  document.getElementById("login-passcode").addEventListener("keydown", e => {
+    if (e.key === "Enter") doLogin();
+  });
+
+  async function doLogin() {
+    const input = document.getElementById("login-passcode");
+    const error = document.getElementById("login-error");
+    const btn = document.getElementById("login-btn");
+    const passcode = input.value.trim();
+    if (!passcode) return;
+
+    btn.textContent = "验证中...";
+    btn.disabled = true;
+    error.style.display = "none";
+
+    try {
+      const resp = await fetch(`${API_BASE}/api/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ passcode }),
+      });
+      const result = await resp.json();
+      if (result.ok) {
+        currentPartner = result.partner;
+        sessionStorage.setItem("partner", currentPartner);
+        trackAction("login", "登录成功");
+        showApp();
+      } else {
+        error.style.display = "block";
+      }
+    } catch (e) {
+      error.textContent = "网络错误，请重试";
+      error.style.display = "block";
+    }
+    btn.textContent = "进入";
+    btn.disabled = false;
+  }
+
+  function showApp() {
+    document.getElementById("login-overlay").classList.add("hidden");
+    loadData();
+  }
+
+  function loadData() {
+    fetch("data.json")
+      .then(r => r.json())
+      .then(d => {
+        data = d;
+        renderLinks();
+        renderFilters();
+        renderWebinars();
+      });
+  }
+
+  function trackAction(action, webinar) {
+    fetch(`${API_BASE}/api/track`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ partner: currentPartner, webinar, action }),
+    }).catch(() => {});
+  }
 
   function renderLinks() {
     const list = document.getElementById("link-list");
@@ -65,6 +125,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.open(url, "_blank");
   };
 
+  window.openWebinar = function(title, url, e) {
+    trackAction("view", title);
+    window.open(url, "_blank");
+  };
+
   function renderWebinars() {
     const list = document.getElementById("webinar-list");
     const empty = document.getElementById("webinar-empty");
@@ -107,8 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="card-attachments">${attachLinks}${docLink}</div>`
         : "";
 
+      const safeTitle = w.title.replace(/'/g, "\\'");
       return `
-      <div class="card" onclick="window.open('${w.videoUrl}', '_blank')">
+      <div class="card" onclick="openWebinar('${safeTitle}', '${w.videoUrl}', event)">
         <div class="card-date">${w.date}</div>
         <div class="card-title">${w.title}</div>
         <div class="card-desc">${(w.description || "").replace(/\n/g, "<br>")}</div>
