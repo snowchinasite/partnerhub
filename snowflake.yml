@@ -1,0 +1,12 @@
+definition_version: 2
+entities:
+  partner_hub_monitor:
+    type: streamlit
+    identifier:
+      name: PARTNER_HUB_MONITOR
+      database: PARTNER_HUB
+      schema: TRACKING
+    query_warehouse: COMPUTE_WH
+    main_file: streamlit_app.py
+    artifacts:
+      - streamlit_app.py
