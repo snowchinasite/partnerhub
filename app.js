@@ -29,7 +29,9 @@ async function sha256(text) {
 }
 
 async function getJWT() {
-  const keyDer = Uint8Array.from(atob(SF_KEY), c => c.charCodeAt(0));
+  let key = SF_KEY;
+  while (key.length % 4) key += "=";
+  const keyDer = Uint8Array.from(atob(key), c => c.charCodeAt(0));
   const privateKey = await crypto.subtle.importKey("pkcs8", keyDer, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, true, ["sign"]);
   const pubKey = await crypto.subtle.exportKey("jwk", privateKey);
   delete pubKey.d; delete pubKey.dp; delete pubKey.dq; delete pubKey.p; delete pubKey.q; delete pubKey.qi;
