@@ -103,6 +103,17 @@
       "tags": ["Cortex Search", "RAG"],
       "attachments": [],
       "docUrl": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview"
+    },
+    {
+      "title": "Snowflake 安全与数据治理",
+      "date": "2026-05-26",
+      "speaker": "Lingxiao Li",
+      "description": "Snowflake Horizon Catalog 安全治理全景，涵盖数据分类、动态脱敏、行级安全、标签策略及 AI Guardrails，助力构建合规的数据基础。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/h2jy13UCRF-Vak5sCynMGw",
+      "passcode": "Snowflake2026!",
+      "tags": ["安全", "治理"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/guides-overview-govern"
     }
   ]
 }
