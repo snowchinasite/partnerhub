@@ -58,7 +58,7 @@
       "passcode": "SnowflakeChina2025!",
       "tags": ["dbt", "数据工程"],
       "attachments": [],
-      "docUrl": "https://docs.snowflake.com/en/user-guide/dbt-snowflake"
+      "docUrl": "https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup"
     },
     {
       "title": "Snowflake Streamlit 数据应用",
@@ -91,7 +91,7 @@
       "passcode": "SnowflakeChina2025!",
       "tags": ["机器学习", "ML"],
       "attachments": [],
-      "docUrl": "https://docs.snowflake.com/en/guides-overview-ml"
+      "docUrl": "https://docs.snowflake.com/en/developer-guide/snowflake-ml/overview"
     },
     {
       "title": "Snowflake原生RAG引擎Cortex Search",
