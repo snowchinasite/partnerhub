@@ -206,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     empty.style.display = "none";
 
     list.innerHTML = filtered.map(w => {
+      const safeTitle = w.title.replace(/'/g, "\\'");
       const passcodeHtml = w.passcode
         ? `<div class="card-passcode">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -232,7 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="card-attachments">${attachLinks}${docLink}</div>`
         : "";
 
-      const safeTitle = w.title.replace(/'/g, "\\'");
       return `
       <div class="card" onclick="openWebinar('${safeTitle}', '${w.videoUrl}', event)">
         <div class="card-date">${w.date}</div>
