@@ -58,7 +58,7 @@
       "passcode": "SnowflakeChina2025!",
       "tags": ["dbt", "数据工程"],
       "attachments": [],
-      "docUrl": "https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup"
+      "docUrl": "https://docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake"
     },
     {
       "title": "Snowflake Streamlit 数据应用",
