@@ -179,8 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
     copyToClipboard(text, el);
   };
 
-  window.openAttachment = function(url, e) {
+  window.openAttachment = function(url, name, e) {
     if (e) e.stopPropagation();
+    trackAction(currentPartner, name || url, "download");
     window.open(url, "_blank");
   };
 
@@ -214,14 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
         : "";
 
       const attachLinks = (w.attachments && w.attachments.length > 0)
-        ? w.attachments.map(a => `<a class="attach-link" onclick="openAttachment('${a.url}', event)" title="${a.name}">
+        ? w.attachments.map(a => `<a class="attach-link" onclick="openAttachment('${a.url}', '${a.name}', event)" title="${a.name}">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
               ${a.name}
             </a>`).join("")
         : "";
 
       const docLink = w.docUrl
-        ? `<a class="attach-link doc-link" onclick="openAttachment('${w.docUrl}', event)" title="官方文档">
+        ? `<a class="attach-link doc-link" onclick="openAttachment('${w.docUrl}', '官方文档', event)" title="官方文档">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
             官方文档
           </a>`
