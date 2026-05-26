@@ -1,4 +1,90 @@
-const API_BASE = "https://partner-hub-api.snowchina.workers.dev";
+const SF_ACCOUNT = "sfseapac-lingxiao-aws1";
+const SF_USER = "PARTNER_HUB_WRITER";
+const SF_WAREHOUSE = "PARTNER_HUB_WH";
+const SF_DATABASE = "PARTNER_HUB";
+const SF_SCHEMA = "TRACKING";
+const SF_KEY = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCut+LiGJykG1KkgO/arvgOGcdvZ0D1gEjLoUaCAs" +
+"dT9vGVzHlj3Dx4Rz8qKO4yDjDnomnIVpXzlVxkgSGWBg6gZLvG2jvY1+nyude4YW+2AXbWKCR325u2qtw5OibPm56FGkPZCOwsid+OaNFWoGwlFYey" +
+"++NTZP4RiFnOkDLxy3tOlTvEIR+BZ1y/tdYYGcfY30tHM1Kr4WPdvq4WBCd974DN8M+egorDn8w93VNQPSKQRZQzajy7wIfnoEpLsuZElGEMs2eUa9wz" +
+"veoax8jzWWwjCB6yNUyk+4xY5mZp/hLiDwcWBh4dKq7se0eqm2LyK+Feo1bzdpQlgr/6svAHAgMBAAECggEAeIsmXhfc+txfCGBtG9PcEN54WsRCbR81" +
+"GkkK/GguXh/iThflKKCql9GQIuZacO6ZjzbfBPm4O3axaCYvpfJH5SGa7HdlExbksjLGQs/24vvfoaHQh2Fc7Yq0pkcYv+P+WpbkeLlPOOtm8jofNEU6" +
+"V9ui5DolfUQQhsgsLfgPLgKxxvC2LxE5EJbqSeYK7Gv2HHGtPR1YFUAqrDCYdS7mZBxIwQA17mfR5ie9oUW2cqdMKRHurSlu2VFKx/yKTgxwo953nLKrp" +
+"X5TZTKNZYtbCb6DUvGpm1tUp4wiKtNAzLvDfr6pL8Xbv9UsJ5u9Qbr2MpxVst6FEZ6MqEi2MTvBAQKBgQDdzgH9AYA5Rfp2h4XosTBDyO4fYqORYHE/2Z" +
+"avlzfRHimE7J6P+RQFjQ4JQ7TAnsXwHdjHRDwl4TFpqYeZHebb1x8VfCb9zHXuFAojF2m3SvcrGyMuSCid1wGZfYnC72vkokneLkwiskjYVUrQ5erQFU19" +
+"k97ylqrwd+tnC2yomwKBgQDJp4N/zaNjxqiI6OvecO2rJgBV13UAmb/bqFPP5pHXznS+qJAUoAJbdr3EA2ElfPAMIF0VxY30DXfnkNoVTwEh41FEWFN6IZ" +
+"Xyoh1MCksK1bbJ5nB2l1C2wo7RwMoAmkvK/xQbaqF1UODdT/FjNzx8gF1Yp4E4ygX8xwQPl9i/BQKBgQCegYOmPJZXV4zfe4XUfhtRtZuFzkW5tEP6LxKi" +
+"NNxskrN1DGtb09HdDapEMKBRLqWhLJMoA7lAEKfxLHd8koPSAu9xuSFcKer00llULn0bwXTU1zXS8zojYe0AtVfneJWP8/H51vgNq36nKnymwEeHoFGaNj" +
+"wS/Fz4L5qILv/dlQKBgEDOix5Zsjbws108rgEQ/fDRB66OzdVhlB093aGlEh3vBen4NkXKnrdSU+5Yv7HSkzryc7f5g4N5iJ1tGglbGJwReB6k3D8V6CDQ" +
+"JOY5MKDMyi/c1SvnuVLi+A9FDCZhcBZPH+Enxbf0RDAb7xHZwKCqiFVjj832bzIrq4xvWoMZAoGAbvwx7oJvxtOjY9tOKCmkgHfSaQwgnHhkjgPiE03GE5" +
+"Pptn+292sWW/ssfwLsHKOBsa5FoFKp1hKHht/BesENGUXsxvexR0A3dlsmun4Lv4hDm7kd3ggoMMwNb8YcmrRJJyqM1F7xa9mOtq45lezxEcDjkYH/A0kme" +
+"Rfy7BF4GI=";
+
+const PARTNER_HASHES = {
+  "f9da9b47244ed94920177ebbd15a4ba1163123d8d2c8143232227e24bc83367e": "Snowflake",
+  "d8c37f08b71ab1a7965297eddb4a2ebd36542a81372c9c9543a72c6e99cfe7c0": "DXC",
+  "0343912023226d37171b4d113cc2f0eabda8e2ac5f5ac9aa681ac142af7630a3": "Capgemini",
+  "803984a9d609c107aea6a33b154a4624df15656b7e5e244181955beea0a628f5": "Chiwu",
+  "2c83815500cc3c72ce18c5aef01335d8d35f71bcf4b65b83ba63396a29019347": "Keyrus",
+  "f5802c2ac61a257b6e5ca391af960bb613b4ff3b8df32b1d2114c15cc5de1656": "Yungoal",
+  "858038ceb921759e555232de75aa7d520d07e78d7a74fdad9e0d3288d1c0eedd": "Deloitte",
+  "e82ac28844b5e2f215a2fbac020020c6e62e830828a86b5f6e68c6517c5c832e": "HAND",
+  "3f1aa9be12841270747a8b5666f044459d06a4d84aa6104e5d6bbc171d224fc5": "Thundersoft",
+  "9bfadccdbbe7485286eccb83fc86d862ca39fa27eda0384f5750e6c31ff5dae7": "Yidatec",
+  "e1b987bd53562c4a8ce38c4853de12b672be1dd7419b82e524524fac9a078fdf": "Atos",
+  "bb98a8eebf3192ad54df4b02c1608d69fed6b1602db8522a8f5d6d6301fbb900": "TCS"
+};
+
+let trackCount = 0;
+const MAX_TRACK_PER_SESSION = 20;
+
+async function sha256(text) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function getJWT() {
+  const keyDer = Uint8Array.from(atob(SF_KEY), c => c.charCodeAt(0));
+  const privateKey = await crypto.subtle.importKey("pkcs8", keyDer, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, true, ["sign"]);
+  const pubKey = await crypto.subtle.exportKey("jwk", privateKey);
+  delete pubKey.d; delete pubKey.dp; delete pubKey.dq; delete pubKey.p; delete pubKey.q; delete pubKey.qi;
+  pubKey.key_ops = ["verify"];
+  const pubCryptoKey = await crypto.subtle.importKey("jwk", pubKey, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, true, ["verify"]);
+  const spki = await crypto.subtle.exportKey("spki", pubCryptoKey);
+  const fpBuf = await crypto.subtle.digest("SHA-256", spki);
+  const fp = btoa(String.fromCharCode(...new Uint8Array(fpBuf)));
+
+  const account = "SFSEAPAC-LINGXIAO_AWS1";
+  const qualifiedUser = `${account}.${SF_USER}`;
+  const now = Math.floor(Date.now() / 1000);
+  const header = { alg: "RS256", typ: "JWT" };
+  const payload = { iss: `${qualifiedUser}.SHA256:${fp}`, sub: qualifiedUser, iat: now, exp: now + 3600 };
+
+  const enc = (obj) => btoa(JSON.stringify(obj)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  const signingInput = enc(header) + "." + enc(payload);
+  const sig = await crypto.subtle.sign("RSASSA-PKCS1-v1_5", privateKey, new TextEncoder().encode(signingInput));
+  const sigB64 = btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  return signingInput + "." + sigB64;
+}
+
+async function trackAction(partner, webinar, action) {
+  if (trackCount >= MAX_TRACK_PER_SESSION) return;
+  trackCount++;
+  try {
+    const token = await getJWT();
+    const sql = `INSERT INTO PARTNER_HUB.TRACKING.ACCESS_LOG (partner_name, webinar_title, action) VALUES ('${partner.replace(/'/g, "''")}', '${webinar.replace(/'/g, "''")}', '${action}')`;
+    await fetch(`https://${SF_ACCOUNT}.snowflakecomputing.com/api/v2/statements`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "PartnerHub/1.0",
+        "Authorization": `Bearer ${token}`,
+        "X-Snowflake-Authorization-Token-Type": "KEYPAIR_JWT",
+      },
+      body: JSON.stringify({ statement: sql, warehouse: SF_WAREHOUSE, database: SF_DATABASE, schema: SF_SCHEMA, timeout: 30 }),
+    });
+  } catch (e) {}
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   let data = { webinars: [], links: [] };
@@ -25,23 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.disabled = true;
     error.style.display = "none";
 
-    try {
-      const resp = await fetch(`${API_BASE}/api/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ passcode }),
-      });
-      const result = await resp.json();
-      if (result.ok) {
-        currentPartner = result.partner;
-        sessionStorage.setItem("partner", currentPartner);
-        trackAction("login", "登录成功");
-        showApp();
-      } else {
-        error.style.display = "block";
-      }
-    } catch (e) {
-      error.textContent = "网络错误，请重试";
+    const hash = await sha256(passcode);
+    const partner = PARTNER_HASHES[hash];
+
+    if (partner) {
+      currentPartner = partner;
+      sessionStorage.setItem("partner", currentPartner);
+      trackAction(partner, "登录成功", "login");
+      showApp();
+    } else {
       error.style.display = "block";
     }
     btn.textContent = "进入";
@@ -63,14 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderFilters();
         renderWebinars();
       });
-  }
-
-  function trackAction(action, webinar) {
-    fetch(`${API_BASE}/api/track`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ partner: currentPartner, webinar, action }),
-    }).catch(() => {});
   }
 
   function renderLinks() {
@@ -127,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.openWebinar = function(title, url, e) {
-    trackAction("view", title);
+    trackAction(currentPartner, title, "view");
     window.open(url, "_blank");
   };
 
