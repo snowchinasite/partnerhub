@@ -112,7 +112,7 @@
       "videoUrl": "https://snowflake.zoom.us/clips/share/h2jy13UCRF-Vak5sCynMGw",
       "passcode": "Snowflake2026!",
       "tags": ["安全", "治理"],
-      "attachments": [],
+      "attachments": [{"name": "演示PPT", "url": "docs/Snowflake Security & Governance.pdf"}],
       "docUrl": "https://docs.snowflake.com/en/guides-overview-govern"
     }
   ]
