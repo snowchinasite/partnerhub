@@ -407,6 +407,12 @@ main {
   font-weight: 500;
 }
 
+.tag-label {
+  color: var(--sf-gray-400);
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
 .attach-label.attach-empty {
   color: var(--sf-gray-400);
   font-weight: 400;
