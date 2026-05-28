@@ -318,14 +318,15 @@ main {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
+  margin-top: 0.75rem;
 }
 
 .card-tag {
   background: var(--sf-gray-100);
-  color: var(--sf-gray-600);
-  padding: 0.2rem 0.6rem;
+  color: var(--sf-gray-400);
+  padding: 0.15rem 0.5rem;
   border-radius: 4px;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
 }
 
 .card-action {
@@ -396,6 +397,8 @@ main {
   gap: 0.5rem;
   flex-wrap: wrap;
   margin-bottom: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--sf-gray-200);
   font-size: 0.8rem;
 }
 

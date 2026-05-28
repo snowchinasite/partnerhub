@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : "";
 
       const linksHtml = (attachLinks || docLink)
-        ? `<div class="card-attachments">${attachLinks}${docLink}</div>`
+        ? `<div class="card-attachments"><span class="attach-label">资料</span>${attachLinks}${docLink}</div>`
         : "";
 
       return `
