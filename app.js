@@ -237,10 +237,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="card" onclick="openWebinar('${safeTitle}', '${w.videoUrl}', event)">
         <div class="card-date">${w.date}</div>
         <div class="card-title">${w.title}</div>
+        <div class="card-tags">${(w.tags || []).map(t => `<span class="card-tag">${t}</span>`).join("")}</div>
         <div class="card-desc">${(w.description || "").replace(/\n/g, "<br>")}</div>
         ${passcodeHtml}
         ${linksHtml}
-        <div class="card-tags"><span class="tag-label">标签：</span>${(w.tags || []).map(t => `<span class="card-tag">${t}</span>`).join("")}</div>
         <span class="card-action">观看录屏 &rarr;</span>
       </div>`;
     }).join("");
