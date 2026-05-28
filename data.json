@@ -46,7 +46,7 @@
       "videoUrl": "https://snowflake.zoom.us/clips/share/-jb0JN0TQMikf-cR4iAMTg",
       "passcode": "&63Yw9+i",
       "tags": ["认证培训", "SnowPro"],
-      "attachments": [],
+      "attachments": [{"name": "演示PPT", "url": "docs/Snowpro Core Certification Training for China.pdf"}, {"name": "学习笔记", "url": "docs/snowflake学习笔记.zip"}],
       "docUrl": "https://learn.snowflake.com/en/certifications/snowpro-core-c03/?pdf_name=SnowProCoreStudyGuideC03"
     },
     {
