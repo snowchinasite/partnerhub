@@ -68,7 +68,7 @@
       "videoUrl": "https://snowflake.zoom.us/clips/share/QaCwQk2CQI2GnQdaK8_zGw",
       "passcode": "Snowflake2026!",
       "tags": ["Streamlit", "数据应用"],
-      "attachments": [],
+      "attachments": [{"name": "演示PPT", "url": "docs/Streamlit Introduction - China Office Hour.pdf"}],
       "docUrl": "https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit"
     },
     {
@@ -79,7 +79,7 @@
       "videoUrl": "https://snowflake.zoom.us/clips/share/zAQmKaSbR5GyzIfh8dsmZg",
       "passcode": "Snowflake2026!",
       "tags": ["SPCS", "容器"],
-      "attachments": [],
+      "attachments": [{"name": "演示PPT", "url": "docs/Snowpark Container Services - China Office Hour.pdf"}],
       "docUrl": "https://docs.snowflake.com/en/developer-guide/snowpark-container-services/overview"
     },
     {
