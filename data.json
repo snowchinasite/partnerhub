@@ -127,5 +127,7 @@
       "docUrl": "https://docs.snowflake.com/en/guides-overview-govern"
     }
   ],
-  "downloads": []
+  "downloads": [
+    {"title": "Cortex Code Starter Deck", "url": "docs/Cortex Code Starter Deck.pdf", "type": "pdf", "meta": "PDF · Cortex Code 入门"}
+  ]
 }
