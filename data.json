@@ -128,6 +128,7 @@
     }
   ],
   "downloads": [
-    {"title": "Cortex Code Starter Deck", "url": "docs/Cortex Code Starter Deck.pdf", "type": "pdf", "meta": "PDF · Cortex Code 入门"}
+    {"title": "Cortex Code Starter Deck", "url": "docs/Cortex Code Starter Deck.pdf", "type": "pdf", "meta": "PDF · Cortex Code 入门"},
+    {"title": "Rapid Cortex Demo", "url": "docs/RapidCortexDemo.mp4", "type": "video", "meta": "视频 · Cortex AI 演示"}
   ]
 }
