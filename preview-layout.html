@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>布局预览 - 侧边栏资料下载</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { min-width: 1200px; }
+    .app-hidden header, .app-hidden main, .app-hidden footer { display: block; }
+
+    .page-layout {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .main-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 90px;
+      align-self: flex-start;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      background: var(--sf-white);
+      border-radius: var(--sf-radius);
+      border: 1px solid var(--sf-gray-200);
+      padding: 1.25rem;
+    }
+
+    .sidebar-section h3 {
+      font-size: 0.95rem;
+      color: var(--sf-navy);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--sf-blue);
+      font-weight: 700;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.15s ease;
+      text-decoration: none;
+    }
+
+    .sidebar-item:hover {
+      background: var(--sf-gray-50);
+    }
+
+    .sidebar-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .sidebar-icon.ppt { background: #FEE2E2; color: #DC2626; }
+    .sidebar-icon.pdf { background: #FEF3C7; color: #D97706; }
+    .sidebar-icon.zip { background: #D1FAE5; color: #059669; }
+
+    .sidebar-item-info {
+      min-width: 0;
+    }
+
+    .sidebar-item-title {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--sf-gray-800);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-item-meta {
+      font-size: 0.65rem;
+      color: var(--sf-gray-400);
+    }
+
+    main {
+      max-width: unset;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .page-layout { flex-direction: column; }
+      .sidebar { width: 100%; position: static; max-height: unset; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-area">
+      <img src="snowflake-logo.svg" alt="Snowflake" height="32" class="snowflake-logo">
+      <div>
+        <h1>Snowflake中国合作伙伴资料站</h1>
+        <p class="subtitle">Partner Resource Hub</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-layout">
+  <main class="main-content">
+    <section class="section active">
+      <div class="section-header">
+        <h2>常用链接</h2>
+        <p class="section-desc">点击卡片直接跳转至对应平台</p>
+      </div>
+      <div class="link-grid">
+        <div class="link-card" style="border-top: 4px solid #0D2B45;"><div class="link-card-title">SPN Learn</div><div class="link-card-desc">合作伙伴按需学习课程</div></div>
+        <div class="link-card" style="border-top: 4px solid #1B9BD1;"><div class="link-card-title">University</div><div class="link-card-desc">入门培训课程</div></div>
+        <div class="link-card" style="border-top: 4px solid #F59E0B;"><div class="link-card-title">官方文档</div><div class="link-card-desc">产品指南与手册</div></div>
+        <div class="link-card" style="border-top: 4px solid #8B5CF6;"><div class="link-card-title">QuickStarts</div><div class="link-card-desc">动手实验教程</div></div>
+        <div class="link-card" style="border-top: 4px solid #10B981;"><div class="link-card-title">社区</div><div class="link-card-desc">问答交流协作</div></div>
+        <div class="link-card" style="border-top: 4px solid #EF4444;"><div class="link-card-title">技术支持</div><div class="link-card-desc">中国区支持</div></div>
+      </div>
+    </section>
+
+    <section class="section active" style="margin-top: 2rem;">
+      <div class="section-header">
+        <h2>Webinar 录屏</h2>
+        <p class="section-desc">点击卡片观看 Webinar 录屏回放</p>
+      </div>
+      <div class="filter-bar">
+        <span class="filter-tag active">全部</span>
+        <span class="filter-tag">安全</span>
+        <span class="filter-tag">Cortex</span>
+        <span class="filter-tag">SPCS</span>
+        <span class="filter-tag">竞品对比</span>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-date">2026-05-26</div>
+          <div class="card-title">Snowflake 安全与数据治理</div>
+          <div class="card-tags"><span class="card-tag">安全</span><span class="card-tag">治理</span></div>
+          <div class="card-desc">Snowflake Horizon Catalog 安全治理全景，涵盖数据分类、动态脱敏、行级安全...</div>
+        </div>
+        <div class="card">
+          <div class="card-date">2026-04-21</div>
+          <div class="card-title">Snowflake原生RAG引擎 Cortex Search</div>
+          <div class="card-tags"><span class="card-tag">Cortex Search</span><span class="card-tag">RAG</span></div>
+          <div class="card-desc">Cortex Search 实战演示，展示如何利用 Snowflake 原生 RAG 引擎构建语义搜索...</div>
+        </div>
+        <div class="card">
+          <div class="card-date">2026-02-03</div>
+          <div class="card-title">SPCS 原生托管 Docker 容器</div>
+          <div class="card-tags"><span class="card-tag">SPCS</span><span class="card-tag">容器</span></div>
+          <div class="card-desc">Snowpark Container Services 实战演示...</div>
+        </div>
+        <div class="card">
+          <div class="card-date">2026-01-04</div>
+          <div class="card-title">Snowflake与Databricks技术对比</div>
+          <div class="card-tags"><span class="card-tag">竞品对比</span></div>
+          <div class="card-desc">从架构、性能、治理、AI 及生态等维度对比...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <h3>📥 资料下载</h3>
+      <a class="sidebar-item">
+        <div class="sidebar-icon ppt">PPT</div>
+        <div class="sidebar-item-info">
+          <div class="sidebar-item-title">SnowPro Core 培训材料</div>
+          <div class="sidebar-item-meta">PDF · 培训认证</div>
+        </div>
+      </a>
+      <a class="sidebar-item">
+        <div class="sidebar-icon ppt">PPT</div>
+        <div class="sidebar-item-info">
+          <div class="sidebar-item-title">Snowflake 安全与数据治理</div>
+          <div class="sidebar-item-meta">PDF · 安全治理</div>
+        </div>
+      </a>
+      <a class="sidebar-item">
+        <div class="sidebar-icon ppt">PPT</div>
+        <div class="sidebar-item-info">
+          <div class="sidebar-item-title">Streamlit Introduction</div>
+          <div class="sidebar-item-meta">PDF · 可视化</div>
+        </div>
+      </a>
+      <a class="sidebar-item">
+        <div class="sidebar-icon ppt">PPT</div>
+        <div class="sidebar-item-info">
+          <div class="sidebar-item-title">SPCS Container Services</div>
+          <div class="sidebar-item-meta">PDF · 容器服务</div>
+        </div>
+      </a>
+      <a class="sidebar-item">
+        <div class="sidebar-icon zip">ZIP</div>
+        <div class="sidebar-item-info">
+          <div class="sidebar-item-title">Snowflake 学习笔记</div>
+          <div class="sidebar-item-meta">ZIP · 综合笔记</div>
+        </div>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Snowflake Inc. All Rights Reserved</p>
+    <p class="footer-note">本站内容仅供 Snowflake 合作伙伴参考使用</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderLinks();
         renderFilters();
         renderWebinars();
+        renderSidebar();
       });
   }
 
@@ -244,5 +245,39 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="card-action">观看录屏 &rarr;</span>
       </div>`;
     }).join("");
+  }
+
+  function renderSidebar() {
+    const container = document.getElementById("sidebar-downloads");
+    const downloads = data.downloads || [];
+    if (downloads.length === 0) {
+      container.innerHTML = "";
+      return;
+    }
+    const iconClass = (type) => {
+      const t = (type || "").toLowerCase();
+      if (t === "ppt" || t === "pptx") return "ppt";
+      if (t === "pdf") return "pdf";
+      if (t === "zip" || t === "rar") return "zip";
+      if (t === "mp4" || t === "video") return "video";
+      return "doc";
+    };
+    const iconLabel = (type) => {
+      const t = (type || "").toUpperCase();
+      return t || "FILE";
+    };
+    container.innerHTML = `
+      <div class="sidebar-section">
+        <h3>资料下载</h3>
+        ${downloads.map(d => `
+          <a class="sidebar-item" onclick="openAttachment('${d.url}', '${(d.title || "").replace(/'/g, "\\'")}', event)">
+            <div class="sidebar-icon ${iconClass(d.type)}">${iconLabel(d.type)}</div>
+            <div class="sidebar-item-info">
+              <div class="sidebar-item-title" title="${d.title || ""}">${d.title || ""}</div>
+              <div class="sidebar-item-meta">${d.meta || ""}</div>
+            </div>
+          </a>
+        `).join("")}
+      </div>`;
   }
 });

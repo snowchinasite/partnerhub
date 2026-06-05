@@ -173,12 +173,103 @@ nav {
   border-bottom-color: var(--sf-blue);
 }
 
-main {
-  max-width: 1200px;
+.page-layout {
+  display: flex;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  gap: 2rem;
   width: 100%;
   flex: 1;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 90px;
+  align-self: flex-start;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  background: var(--sf-white);
+  border-radius: var(--sf-radius);
+  border: 1px solid var(--sf-gray-200);
+  padding: 1.25rem;
+}
+
+.sidebar-section h3 {
+  font-size: 0.95rem;
+  color: var(--sf-navy);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--sf-blue);
+  font-weight: 700;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  text-decoration: none;
+}
+
+.sidebar-item:hover {
+  background: var(--sf-gray-50);
+}
+
+.sidebar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sidebar-icon.ppt { background: #FEE2E2; color: #DC2626; }
+.sidebar-icon.pdf { background: #FEF3C7; color: #D97706; }
+.sidebar-icon.zip { background: #D1FAE5; color: #059669; }
+.sidebar-icon.video { background: #DBEAFE; color: #2563EB; }
+.sidebar-icon.doc { background: #EDE9FE; color: #7C3AED; }
+
+.sidebar-item-info {
+  min-width: 0;
+}
+
+.sidebar-item-title {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--sf-gray-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-item-meta {
+  font-size: 0.65rem;
+  color: var(--sf-gray-400);
+}
+
+.sidebar-empty {
+  font-size: 0.8rem;
+  color: var(--sf-gray-400);
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .section {
@@ -538,6 +629,18 @@ footer {
   color: rgba(255,255,255,0.3);
 }
 
+@media (max-width: 1024px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    max-height: unset;
+  }
+}
+
 @media (max-width: 768px) {
   .link-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -551,7 +654,7 @@ footer {
     font-size: 1.2rem;
   }
 
-  main {
+  .page-layout {
     padding: 1.5rem 1rem;
   }
 
