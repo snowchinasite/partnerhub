@@ -18,7 +18,8 @@ const PARTNER_HASHES = {
   "9bfadccdbbe7485286eccb83fc86d862ca39fa27eda0384f5750e6c31ff5dae7": "Yidatec",
   "e1b987bd53562c4a8ce38c4853de12b672be1dd7419b82e524524fac9a078fdf": "Atos",
   "bb98a8eebf3192ad54df4b02c1608d69fed6b1602db8522a8f5d6d6301fbb900": "TCS",
-  "387536999142a55f4d66bbe633d6688840aa7c08bbcb3d4d5423bc4729151835": "AWS"
+  "387536999142a55f4d66bbe633d6688840aa7c08bbcb3d4d5423bc4729151835": "AWS",
+  "dcd7bd716bc4812045196aec8cff0f94c159b56784a08f4c0cbeba0a43df7710": "信泰宜合"
 };
 
 let trackCount = 0;
