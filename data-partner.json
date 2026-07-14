@@ -1,0 +1,15 @@
+{
+  "webinars": [
+    {
+      "title": "Snowflake与Databricks技术对比",
+      "date": "2026-01-04",
+      "speaker": "Lingxiao Li",
+      "description": "从架构、性能、治理、AI 及生态等维度对比 Snowflake 与 Databricks，帮助合作伙伴在客户沟通中清晰传递 Snowflake 的差异化优势。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/cusX9Kd8SMiuGgiIndKCUg",
+      "passcode": "Snowflake2026!",
+      "tags": ["竞品对比"],
+      "attachments": [],
+      "docUrl": ""
+    }
+  ]
+}

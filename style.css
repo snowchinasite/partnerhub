@@ -389,6 +389,21 @@ main {
   font-size: 0.75rem;
   color: var(--sf-gray-500);
   margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-partner-only {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #D97706;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
 }
 
 .card-title {

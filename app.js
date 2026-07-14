@@ -6,20 +6,20 @@ const SF_SCHEMA = "TRACKING";
 const SF_KEY = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCut+LiGJykG1KkgO/arvgOGcdvZ0D1gEjLoUaCAsdT9vGVzHlj3Dx4Rz8qKO4yDjDnomnIVpXzlVxkgSGWBg6gZLvG2jvY1+nyude4YW+2AXbWKCR325u2qtw5OibPm56FGkPZCOwsid+OaNFWoGwlFYey++NTZP4RiFnOkDLxy3tOlTvEIR+BZ1y/tdYYGcfY30tHM1Kr4WPdvq4WBCd974DN8M+egorDn8w93VNQPSKQRZQzajy7wIfnoEpLsuZElGEMs2eUa9wzveoax8jzWWwjCB6yNUyk+4xY5mZp/hLiDwcWBh4dKq7se0eqm2LyK+Feo1bzdpQlgr/6svAHAgMBAAECggEAeIsmXhfc+txfCGBtG9PcEN54WsRCbR81GkkK/GguXh/iThflKKCql9GQIuZacO6ZjzbfBPm4O3axaCYvpfJH5SGa7HdlExbksjLGQs/24vvfoaHQh2Fc7Yq0pkcYv+P+WpbkeLlPOOtm8jofNEU6V9ui5DolfUQQhsgsLfgPLgKxxvC2LxE5EJbqSeYK7Gv2HHGtPR1YFUAqrDCYdS7mZBxIwQA17mfR5ie9oUW2cqdMKRHurSlu2VFKx/yKTgxwo953nLKrpX5TZTKNZYtbCb6DUvGpm1tUp4wiKtNAzLvDfr6pL8Xbv9UsJ5u9Qbr2MpxVst6FEZ6MqEi2MTvBAQKBgQDdzgH9AYA5Rfp2h4XosTBDyO4fYqORYHE/2ZavlzfRHimE7J6P+RQFjQ4JQ7TAnsXwHdjHRDwl4TFpqYeZHebb1x8VfCb9zHXuFAojF2m3SvcrGyMuSCid1wGZfYnC72vkokneLkwiskjYVUrQ5erQFU19k97ylqrwd+tnC2yomwKBgQDJp4N/zaNjxqiI6OvecO2rJgBV13UAmb/bqFPP5pHXznS+qJAUoAJbdr3EA2ElfPAMIF0VxY30DXfnkNoVTwEh41FEWFN6IZXyoh1MCksK1bbJ5nB2l1C2wo7RwMoAmkvK/xQbaqF1UODdT/FjNzx8gF1Yp4E4ygX8xwQPl9i/BQKBgQCegYOmPJZXV4zfe4XUfhtRtZuFzkW5tEP6LxKiNNxskrN1DGtb09HdDapEMKBRLqWhLJMoA7lAEKfxLHd8koPSAu9xuSFcKer00llULn0bwXTU1zXS8zojYe0AtVfneJWP8/H51vgNq36nKnymwEeHoFGaNjwS/Fz4L5qILv/dlQKBgEDOix5Zsjbws108rgEQ/fDRB66OzdVhlB093aGlEh3vBen4NkXKnrdSU+5Yv7HSkzryc7f5g4N5iJ1tGglbGJwReB6k3D8V6CDQJOY5MKDMyi/c1SvnuVLi+A9FDCZhcBZPH+Enxbf0RDAb7xHZwKCqiFVjj832bzIrq4xvWoMZAoGAbvwx7oJvxtOjY9tOKCmkgHfSaQwgnHhkjgPiE03GE5Pptn+292sWW/ssfwLsHKOBsa5FoFKp1hKHht/BesENGUXsxvexR0A3dlsmun4Lv4hDm7kd3ggoMMwNb8YcmrRJJyqM1F7xa9mOtq45lezxEcDjkYH/A0kmeRfYy7BF4GI=";
 
 const PARTNER_HASHES = {
-  "f9da9b47244ed94920177ebbd15a4ba1163123d8d2c8143232227e24bc83367e": "Snowflake",
-  "77787156f5815b81050f16fa8f85aa4e53fa6e1f78a6ad743b0df06f6761a4a3": "DXC",
-  "0343912023226d37171b4d113cc2f0eabda8e2ac5f5ac9aa681ac142af7630a3": "Capgemini",
-  "803984a9d609c107aea6a33b154a4624df15656b7e5e244181955beea0a628f5": "Chiwu",
-  "2c83815500cc3c72ce18c5aef01335d8d35f71bcf4b65b83ba63396a29019347": "Keyrus",
-  "f5802c2ac61a257b6e5ca391af960bb613b4ff3b8df32b1d2114c15cc5de1656": "Yungoal",
-  "858038ceb921759e555232de75aa7d520d07e78d7a74fdad9e0d3288d1c0eedd": "Deloitte",
-  "e82ac28844b5e2f215a2fbac020020c6e62e830828a86b5f6e68c6517c5c832e": "HAND",
-  "3f1aa9be12841270747a8b5666f044459d06a4d84aa6104e5d6bbc171d224fc5": "Thundersoft",
-  "9bfadccdbbe7485286eccb83fc86d862ca39fa27eda0384f5750e6c31ff5dae7": "Yidatec",
-  "e1b987bd53562c4a8ce38c4853de12b672be1dd7419b82e524524fac9a078fdf": "Atos",
-  "bb98a8eebf3192ad54df4b02c1608d69fed6b1602db8522a8f5d6d6301fbb900": "TCS",
-  "387536999142a55f4d66bbe633d6688840aa7c08bbcb3d4d5423bc4729151835": "AWS",
-  "dcd7bd716bc4812045196aec8cff0f94c159b56784a08f4c0cbeba0a43df7710": "信泰宜合"
+  "f9da9b47244ed94920177ebbd15a4ba1163123d8d2c8143232227e24bc83367e": { name: "Snowflake", type: "partner" },
+  "77787156f5815b81050f16fa8f85aa4e53fa6e1f78a6ad743b0df06f6761a4a3": { name: "DXC", type: "partner" },
+  "0343912023226d37171b4d113cc2f0eabda8e2ac5f5ac9aa681ac142af7630a3": { name: "Capgemini", type: "partner" },
+  "803984a9d609c107aea6a33b154a4624df15656b7e5e244181955beea0a628f5": { name: "Chiwu", type: "partner" },
+  "2c83815500cc3c72ce18c5aef01335d8d35f71bcf4b65b83ba63396a29019347": { name: "Keyrus", type: "partner" },
+  "f5802c2ac61a257b6e5ca391af960bb613b4ff3b8df32b1d2114c15cc5de1656": { name: "Yungoal", type: "partner" },
+  "858038ceb921759e555232de75aa7d520d07e78d7a74fdad9e0d3288d1c0eedd": { name: "Deloitte", type: "partner" },
+  "e82ac28844b5e2f215a2fbac020020c6e62e830828a86b5f6e68c6517c5c832e": { name: "HAND", type: "partner" },
+  "3f1aa9be12841270747a8b5666f044459d06a4d84aa6104e5d6bbc171d224fc5": { name: "Thundersoft", type: "partner" },
+  "9bfadccdbbe7485286eccb83fc86d862ca39fa27eda0384f5750e6c31ff5dae7": { name: "Yidatec", type: "partner" },
+  "e1b987bd53562c4a8ce38c4853de12b672be1dd7419b82e524524fac9a078fdf": { name: "Atos", type: "partner" },
+  "bb98a8eebf3192ad54df4b02c1608d69fed6b1602db8522a8f5d6d6301fbb900": { name: "TCS", type: "partner" },
+  "387536999142a55f4d66bbe633d6688840aa7c08bbcb3d4d5423bc4729151835": { name: "AWS", type: "partner" },
+  "dcd7bd716bc4812045196aec8cff0f94c159b56784a08f4c0cbeba0a43df7710": { name: "信泰宜合", type: "partner" }
 };
 
 let trackCount = 0;
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let data = { webinars: [], links: [] };
   let activeWebinarFilter = "全部";
   let currentPartner = sessionStorage.getItem("partner") || "";
+  let currentAccountType = sessionStorage.getItem("accountType") || "";
 
   if (currentPartner) {
     showApp();
@@ -102,12 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     error.style.display = "none";
 
     const hash = await sha256(passcode);
-    const partner = PARTNER_HASHES[hash];
+    const account = PARTNER_HASHES[hash];
 
-    if (partner) {
-      currentPartner = partner;
+    if (account) {
+      currentPartner = account.name;
+      currentAccountType = account.type;
       sessionStorage.setItem("partner", currentPartner);
-      trackAction(partner, "登录成功", "login");
+      sessionStorage.setItem("accountType", currentAccountType);
+      trackAction(currentPartner, "登录成功", "login");
       showApp();
     } else {
       error.style.display = "block";
@@ -127,10 +130,29 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(r => r.json())
       .then(d => {
         data = d;
-        renderLinks();
-        renderFilters();
-        renderWebinars();
-        renderSidebar();
+        if (currentAccountType === "partner") {
+          fetch("data-partner.json")
+            .then(r => r.json())
+            .then(pd => {
+              (pd.webinars || []).forEach(w => { w._partnerOnly = true; });
+              data.webinars = data.webinars.concat(pd.webinars || []);
+              renderLinks();
+              renderFilters();
+              renderWebinars();
+              renderSidebar();
+            })
+            .catch(() => {
+              renderLinks();
+              renderFilters();
+              renderWebinars();
+              renderSidebar();
+            });
+        } else {
+          renderLinks();
+          renderFilters();
+          renderWebinars();
+          renderSidebar();
+        }
       });
   }
 
@@ -236,9 +258,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="card-attachments"><span class="attach-label">资料：</span>${attachLinks}${docLink}</div>`
         : "";
 
+      const partnerBadge = w._partnerOnly
+        ? `<span class="badge-partner-only">Partner Only</span>`
+        : "";
+
       return `
       <div class="card" onclick="openWebinar('${safeTitle}', '${w.videoUrl}', event)">
-        <div class="card-date">${w.date}</div>
+        <div class="card-date">${w.date}${partnerBadge}</div>
         <div class="card-title">${w.title}</div>
         <div class="card-tags">${(w.tags || []).map(t => `<span class="card-tag">${t}</span>`).join("")}</div>
         <div class="card-desc">${(w.description || "").replace(/\n/g, "<br>")}</div>
