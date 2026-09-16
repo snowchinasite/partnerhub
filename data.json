@@ -124,7 +124,7 @@
       "videoUrl": "https://snowflake.zoom.us/clips/share/7zmBUOi2RIuDvVymCtdddA",
       "passcode": "Snow@2026",
       "tags": ["迁移", "数据仓库"],
-      "attachments": [],
+      "attachments": [{"name": "演示PPT", "url": "docs/Snowflake AIM_Customer Facing Deck.pdf"}],
       "docUrl": "https://docs.snowflake.com/en/migrations/aim-for-datawarehouses/manual-migration/README"
     },
     {
