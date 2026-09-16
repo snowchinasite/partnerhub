@@ -117,6 +117,17 @@
       "docUrl": "https://docs.snowflake.com/en/guides-overview-govern"
     },
     {
+      "title": "数据仓库迁移至 Snowflake 实战",
+      "date": "2026-08-26",
+      "speaker": "Lingxiao Li",
+      "description": "数据仓库迁移至 Snowflake 的完整实战演示，涵盖手动迁移流程、DDL/DML 转换、数据验证及迁移最佳实践，帮助合作伙伴掌握端到端迁移方法论。",
+      "videoUrl": "https://snowflake.zoom.us/clips/share/7zmBUOi2RIuDvVymCtdddA",
+      "passcode": "Snow@2026",
+      "tags": ["迁移", "数据仓库"],
+      "attachments": [],
+      "docUrl": "https://docs.snowflake.com/en/migrations/aim-for-datawarehouses/manual-migration/README"
+    },
+    {
       "title": "Snowflake2026峰会产品发布！",
       "date": "2026-07-04",
       "speaker": "Lingxiao Li",
